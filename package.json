@@ -1,0 +1,28 @@
+{
+  "name": "bptg-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "SET NODE_ENV=development && nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gstaykov5/bptg-api.git"
+  },
+  "author": "Georgi Staykov",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gstaykov5/bptg-api/issues"
+  },
+  "homepage": "https://github.com/gstaykov5/bptg-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
