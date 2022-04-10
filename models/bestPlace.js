@@ -25,6 +25,9 @@ const BestPlace = new mongoose.Schema({
         type: String,
         required: true  
     },
+    location: [
+        Number
+    ],
     images: [
         {
             image : {

@@ -33,4 +33,41 @@ router.get('/place', async (req, res) => {
     }
 })
 
+router.put('/place/edit/:id', async (req, res) => {
+    const editedPlace = req.body;
+    const id = req.params.id;
+    
+    try {
+        const place = await bestPlaceService.editPlace(id , editedPlace);
+    
+        res.status(200).json({
+            place: place,
+        });
+    } catch (error) {
+        console.log(error.message)
+        res.json({
+            type: error,
+            message: error.message
+        })
+    }
+})
+
+router.delete('/place/delete/:id', async (req, res) => {
+    const id = req.params.id;
+    
+    try {
+        const place = await bestPlaceService.deletePlace(id);
+    
+        res.status(200).json({
+            place: place,
+        });
+    } catch (error) {
+        console.log(error.message)
+        res.json({
+            type: error,
+            message: error.message
+        })
+    }
+})
+
 module.exports = router;

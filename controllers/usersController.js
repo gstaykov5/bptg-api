@@ -17,6 +17,7 @@ router.post('/register', async (req, res) => {
             username: user.username,
             favorites: user.favorites,
             avatar: user.avatar,
+            role: user.role,
             accessToken
         });
     } catch (error) {
@@ -40,6 +41,7 @@ router.post('/login', async (req, res) => {
             username: user.username,
             favorites: user.favorites,
             avatar: user.avatar,
+            role: user.role,
             accessToken
         });
     } catch (error) {
@@ -63,6 +65,7 @@ router.post('/edit/:id', async (req, res) => {
             username: user.username,
             favorites: user.favorites,
             avatar: user.avatar,
+            role: user.role,
             accessToken
         });
     } catch (error) {
